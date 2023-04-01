@@ -1,0 +1,41 @@
+{
+  "name": "weather_app",
+  "version": "1.0.0",
+  "description": "Weather App",
+  "default": "index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "targets": {
+    "main": false
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Peach",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.2.1",
+    "@parcel/transformer-webmanifest": "^2.8.3",
+    "assert": "^2.0.0",
+    "buffer": "^5.7.1",
+    "crypto-browserify": "^3.12.0",
+    "events": "^3.3.0",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "parcel": "^2.2.1",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "punycode": "^1.4.1",
+    "querystring-es3": "^0.2.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0",
+    "util": "^0.12.5"
+  },
+  "dependencies": {
+    "@google-cloud/secret-manager": "^4.2.1",
+    "dotenv": "^16.0.3",
+    "fracty": "^1.0.9",
+    "google-auth-library": "^8.7.0"
+  }
+}

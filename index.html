@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Weather App, coded by the Peach." />
+    <meta name="keywords" content="HTML, CSS, Sass, Javascript, APIs, Coding" />
+    <meta name="author" content="the Peach" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./src/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./src/favicon/favicon-16x16.png"
+    />
+    <!-- <link rel="manifest" href="src/fav/site.webmanifest" /> -->
+
+    <link rel="stylesheet" href="./src/sass/main.scss" />
+    <script type="module" src="./src/js/script.js"></script>
+
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="app-logo">Weather</div>
+      <div class="search">
+        <input
+          class="search__input"
+          type="text"
+          id="inputSearch"
+          placeholder="enter location"
+        />
+        <button class="search__button" id="btnSearch">
+          <img src="./src/assets/search-svgrepo-com.svg" alt="search icon" />
+        </button>
+      </div>
+      <div class="author-logo">P.</div>
+    </header>
+
+    <section class="section-scroll" id="sectionScroll">
+      <!-- <div>
+        Weather in <span>${city}</span> Weather in <span>${city}</span>&nbsp;
+      </div>
+      <div>
+        Weather in <span>${city}</span> Weather in <span>${city}</span>&nbsp;
+      </div>
+      <div>
+        Weather in <span>${city}</span> Weather in <span>${city}</span>&nbsp;
+      </div> -->
+    </section>
+
+    <main class="weather">
+      <div class="w-current" id="wCurrent">
+        <!-- <div class="w-current__date-location">
+          <span class="date"> data </span>
+          <span class="location"> data </span>
+        </div>
+
+        <div class="w-current__temp">
+          <img src="data" alt="weather logo" />
+          <div>data</div>
+        </div>
+
+        <div class="w-current__description">
+          <div>Feels like <span> data </span>. <span> data </span>.</div>
+        </div>
+
+        <div class="w-current__details">
+          <div>
+            <div>Dew point: <span> data </span></div>
+            <div>Humidity: <span> data </span></div>
+          </div>
+          <div>
+            <div>Clouds: <span> data </span></div>
+            <div>Visibility: <span> data </span></div>
+          </div>
+          <div>
+            <div>Pressure: <span> data </span></div>
+            <div>Wind: <span> data </span></div>
+          </div>
+          <div>
+            <div class="suntime">Sunrise: data</div>
+            <div class="suntime">Sunset: data</div>
+          </div>
+        </div> -->
+      </div>
+
+      <div class="w-future" id="wFuture">
+        <!-- <div class="w-future__day">
+          <span class="date"> data </span>
+          <div class="temp">
+            <img src="data" alt="weather logo" />
+            <div>data</div>
+          </div>
+
+          <div class="temp-range">
+            The high will be data , the low will be data .
+          </div>
+
+          <div class="daytimes">
+            <div class="daytime">
+              <div>Morning:</div>
+              <div>data</div>
+            </div>
+
+            <div class="daytime">
+              <div>Afternoon:</div>
+              <div>data</div>
+            </div>
+
+            <div class="daytime">
+              <div>Evening:</div>
+              <div>data</div>
+            </div>
+
+            <div class="daytime">
+              <div>Night:</div>
+              <div>data</div>
+            </div>
+          </div>
+
+          <span class="number"> data </span>
+        </div> -->
+      </div>
+    </main>
+
+    <footer class="author">
+      <div>
+        Designed and coded by
+        <a href="https://github.com/Peac-h"> the Peach</a>.
+      </div>
+    </footer>
+  </body>
+</html>

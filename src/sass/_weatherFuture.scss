@@ -1,0 +1,131 @@
+.w-future {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(34rem, max-content));
+
+  padding: 2rem 1rem;
+  gap: 1rem;
+  place-content: center;
+  position: relative;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-bottom: 4rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: 1fr;
+    // grid-template-columns: repeat(auto-fit, minmax(28rem, max-content));
+  }
+
+  .w-future__day {
+    border-bottom-right-radius: 2rem;
+    display: grid;
+    grid-template-rows: repeat(3, min-content) 1fr min-content;
+    padding: 1rem;
+    cursor: pointer;
+    transition: 0.5s;
+    place-items: center;
+
+    &:nth-of-type(1) {
+      background: var(--color-redish-rose);
+    }
+    &:nth-of-type(2) {
+      background: var(--color-gold);
+    }
+    &:nth-of-type(3) {
+      background: var(--color-greysh-gold);
+    }
+    &:nth-of-type(4) {
+      background: var(--color-grey);
+    }
+
+    .date,
+    .number {
+      justify-self: end;
+      align-self: end;
+      color: var(--color-dark);
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .temp {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      translate: 0 1rem;
+      transition: 0.5s;
+    }
+
+    .temp-range {
+      font-size: 1.5rem;
+      translate: 0 1rem;
+      transition: 0.5s;
+
+      @media only screen and (max-width: $bp-small) {
+        text-align: center;
+      }
+    }
+
+    .daytimes {
+      width: 100%;
+      font-size: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(max-content, 7rem));
+      justify-content: center;
+      justify-items: center;
+      gap: 1rem;
+      opacity: 0;
+      translate: 0 4rem;
+      transition: 0.5s;
+
+      @media only screen and (max-width: $bp-small) {
+        gap: 0;
+      }
+
+      .daytime {
+        text-align: center;
+      }
+    }
+
+    &:hover {
+      background: var(--color-dark);
+      outline: var(--border);
+
+      span {
+        color: var(--color-light);
+      }
+      .date {
+        font-weight: 500;
+      }
+      .daytimes {
+        opacity: 1;
+        translate: 0 1.5rem;
+      }
+      .temp-range {
+        translate: 0 -1rem;
+      }
+      .temp {
+        translate: 0 -1rem;
+      }
+      .number {
+        opacity: 0;
+        font-weight: 500;
+      }
+    }
+
+    // non hover devices
+    @media (any-hover: none) {
+      .daytimes {
+        opacity: 1;
+        translate: 0 1.5rem;
+      }
+      .temp-range {
+        translate: 0 -1rem;
+      }
+      .temp {
+        translate: 0 -1rem;
+      }
+      .number {
+        opacity: 0;
+      }
+    }
+  }
+}

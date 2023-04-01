@@ -1,0 +1,61 @@
+:root {
+  --font-main: "Montserrat", sans-serif;
+  --font-secondary: "Space Mono", monospace;
+  --color-dark: #3f3b37;
+  --color-light: #fbefdf;
+  --color-gold: #b89053;
+  --color-greysh-gold: #877865;
+  --color-redish-rose: #956757;
+  --color-grey: #b2b2a8;
+  --border: 1px solid #fbefdf;
+}
+
+$bp-medium: 50em; ///////////// 800px
+$bp-small: 26em; ///////////// 416px
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 50%;
+  }
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+
+  font-family: var(--font-main);
+  font-weight: 500;
+  font-size: 2rem;
+  background: var(--color-dark);
+
+  display: grid;
+  grid-template-columns: 1fr minmax(25rem, 144rem) 1fr;
+  grid-template-rows: 1fr 9rem 15rem minmax(min-content, 41rem) 4rem 1fr;
+
+  .weather {
+    grid-column: 2;
+    grid-row: 4;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    row-gap: 2rem;
+
+    border-bottom: var(--border);
+    color: var(--color-light);
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

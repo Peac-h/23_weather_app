@@ -1,0 +1,93 @@
+.header {
+  grid-column: 2;
+  grid-row: 2;
+
+  border-bottom: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  // logos
+
+  .app-logo,
+  .author-logo {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 2rem;
+    position: absolute;
+    z-index: -1;
+  }
+  .app-logo {
+    color: var(--color-light);
+    left: 0;
+
+    &::first-letter {
+      font-size: 2.5rem;
+    }
+  }
+  .author-logo {
+    color: var(--color-light);
+    font-size: 2.5rem;
+    text-align: end;
+    right: 0;
+  }
+
+  // search
+
+  .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__input {
+      border: none;
+      outline: none;
+      font: inherit;
+      height: 3.5rem;
+      width: 3.5rem;
+      background: var(--color-dark);
+      border: var(--border);
+      border-radius: 2rem;
+      font-weight: 600;
+      color: var(--color-light);
+      transition: 1s;
+
+      &::placeholder {
+        opacity: 0;
+      }
+
+      &:focus {
+        width: 30rem;
+        padding: 0 2rem;
+
+        &::placeholder {
+          display: block;
+          color: var(--color-light);
+          opacity: 0.7;
+        }
+      }
+    }
+
+    // search button
+
+    &__button {
+      border: none;
+      height: 3rem;
+      width: 3rem;
+      padding: 0.5rem 0.5rem;
+      background: var(--color-dark);
+      cursor: pointer;
+      border-radius: 50%;
+      margin-left: -3.2rem;
+
+      @media only screen and (max-width: $bp-small) {
+        height: 2.5rem;
+        width: 2.5rem;
+        padding: 0;
+        margin-left: -3rem;
+      }
+    }
+  }
+}
