@@ -43,6 +43,14 @@ body {
   grid-template-columns: 1fr minmax(25rem, 144rem) 1fr;
   grid-template-rows: 1fr 9rem 15rem minmax(min-content, 41rem) 4rem 1fr;
 
+  &::-webkit-scrollbar {
+    width: 0.5vw;
+    height: 100%;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-light);
+  }
+
   .weather {
     grid-column: 2;
     grid-row: 4;
